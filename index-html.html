@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+        }
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive JavaScript Assignment</h1>
+
+    <!-- Background Color Toggle Button -->
+    <button id="colorToggleBtn">Toggle Background Color</button>
+
+    <!-- Text Size Slider -->
+    <div>
+        <label for="textSizeSlider">Text Size:</label>
+        <input type="range" id="textSizeSlider" min="10" max="30" value="16">
+        <p id="dynamicText">This text will change size dynamically.</p>
+    </div>
+
+    <!-- Modal Trigger -->
+    <button id="openModalBtn">Open Modal</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Modal Title</h2>
+            <p>This is a modal window created with JavaScript!</p>
+        </div>
+    </div>
+
+    <!-- Form with Validation -->
+    <form id="registrationForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error"></span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error"></span>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" class="error"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Bonus: Dropdown Menu -->
+    <div>
+        <label for="optionDropdown">Select an Option:</label>
+        <select id="optionDropdown">
+            <option value="">Choose an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <p id="dropdownMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
